@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-may-2015 6:32:49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Cancion" table="cancion" catalog="softwspotify" optimistic-lock="version">
+        <id name="idcancion" type="int">
+            <column name="idcancion" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombrecancion" type="string">
+            <column name="nombrecancion" length="100" not-null="true" />
+        </property>
+        <property name="idlista" type="int">
+            <column name="idlista" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="300" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
